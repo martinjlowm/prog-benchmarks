@@ -1,0 +1,45 @@
+#+TITLE: JavaScript
+
+* Node.js 6.12.3
+
+** Array .concat vs .push (and unpack)
+   #+BEGIN_SRC text
+     ....................
+     For 1000 iterations averaged over 20 runs, the results are as follows:
+     a = a.concat(b): 10.1s
+     a.push(...b): 1.5s
+   #+END_SRC
+
+* Node.js 7.10.1
+
+** Array .concat vs .push (and unpack)
+   #+BEGIN_SRC text
+     ....................
+     For 1000 iterations averaged over 20 runs, the results are as follows:
+     a = a.concat(b): 9.7s
+     a.push(...b): 1.1s
+   #+END_SRC
+
+* Node.js 8.9.4
+
+** Array .concat vs .push (and unpack)
+   #+BEGIN_SRC text
+     ....................
+     For 1000 iterations averaged over 20 runs, the results are as follows:
+     a = a.concat(b): 11.1s
+     a.push(...b): 0.15s
+     ....................
+     For 1000 iterations averaged over 20 runs, the results are as follows:
+     a = a.concat(b): 11.85s
+     a.push(...b): 0.1s
+   #+END_SRC
+
+* Node.js 9.4.0
+
+** Array .concat vs .push (and unpack)
+   #+BEGIN_SRC text
+     ....................
+     For 1000 iterations averaged over 20 runs, the results are as follows:
+     a = a.concat(b): 11.85s
+     a.push(...b): 0.1s
+   #+END_SRC
