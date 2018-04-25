@@ -1,1 +1,23 @@
 #+TITLE: Operation benchmarks for common programming languages
+
+This project consists of a set of small benchmark scripts that reside in
+=src/<lang>/=. Every language directory contains a benchmark Bash script that
+initiates a Docker container that invokes scripts of interest. It has been
+pre-configured with a bunch of different versions of JavaScript (Node.js),
+Python, Ruby and Lua.
+
+Initially, the Docker image needs to be built using
+
+#+BEGIN_SRC bash
+docker build -t prog-benchmarks
+#+END_SRC
+
+To use the build (for JavaScript for example), run
+
+#+BEGIN_SRC bash
+docker run -it prog-benchmarks "nodenv shell 9.4.0 && node <<EOF
+$(cat $f)
+EOF"
+#+END_SRC
+
+Where ~$f~ is a Bash variable of a file name.
